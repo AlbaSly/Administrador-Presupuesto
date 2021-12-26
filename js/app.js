@@ -168,7 +168,7 @@ function askBudget() {
 function checkPreviousSession() {
     let loaded;
     if (localStorage.getItem('budgetObj')) {
-        loaded = confirm('Se ha encontrado datos, ¿Desea cargarlos?');
+        loaded = confirm('Se han encontrado datos, ¿Desea cargarlos?');
         if (loaded) {
             loadLocalStorage();
         }
@@ -234,7 +234,7 @@ function deleteExpense(ev) {
     if (ev.target.classList.contains('borrar-gasto')) {
         const idSelected = Number(ev.target.parentElement.getAttribute('data-id'));
         personalBudget.deleteExpense(idSelected);
-        
+
         globalUiUpdate();
     }
 
